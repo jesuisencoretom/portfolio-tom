@@ -1,0 +1,27 @@
+{
+  "title": "Mentions légales",
+  "footerLinks": {
+    "leftLink": {
+      "label": "retour",
+      "link": "/",
+      "noUnderline": true
+    }
+  },
+  "shapes": [
+    {
+      "name": "triangle",
+      "position": "100, 150",
+      "color": "#FF5733"
+    },
+    {
+      "name": "circle",
+      "position": "300, 700",
+      "color": "#33FF57"
+    },
+    {
+      "name": "square",
+      "position": "100, 700",
+      "color": "#FF33FF"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+@use 'sass:math';
+
+@function toRem($px) {
+  @if not $px {
+    @error 'Missing argument: `$px`.';
+  }
+
+  @if math.unit($px)=='px' {
+    $px: math.div($px, 1px);
+  }
+
+  @return math.div($px, 16) * 1rem;
+}

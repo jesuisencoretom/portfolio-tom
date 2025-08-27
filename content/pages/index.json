@@ -1,0 +1,65 @@
+{
+  "title": "Tom Wainberg",
+  "subtitle": "touche-à-tout créatif",
+  "items": [
+    {
+      "label": "cogito",
+      "link": "https://cogito.fr/",
+      "description": "vidéo, graphisme & motion"
+    },
+    {
+      "label": "l'esprit critique",
+      "link": "https://www.youtube.com/@lespritcritique",
+      "description": "vidéo & motion"
+    },
+    {
+      "label": "reguletapub",
+      "link": "https://www.youtube.com/@reguletapub",
+      "description": "vidéo & motion"
+    },
+    {
+      "label": "cloudyheads",
+      "link": "https://www.behance.net/gallery/229820667/Cloudy-Heads-050725",
+      "description": "photographie"
+    },
+    {
+      "label": "lazykips",
+      "link": "https://www.behance.net/gallery/229316317/Lazy-Kips-210625",
+      "description": "photographie"
+    },
+    {
+      "label": "befake",
+      "link": "https://befake.osc-fr1.scalingo.io/",
+      "description": "UI/UX design"
+    }
+  ],
+  "footerLinks": {
+    "leftLink": {
+      "label": "contact",
+      "link": "/contact",
+      "noUnderline": true
+    },
+    "rightLink": {
+      "label": "mentions légales",
+      "link": "/mentions-legales",
+      "noUnderline": true
+    }
+  },
+  "shapes": [
+    {
+      "name": "triangle",
+      "position": "100, 150",
+      "color": "#FF5733"
+    },
+    {
+      "name": "circle",
+      "position": "300, 700",
+      "color": "#33FF57"
+    },
+    {
+      "name": "square",
+      "position": "100, 700",
+      "color": "#FF33FF"
+    }
+  ]
+}

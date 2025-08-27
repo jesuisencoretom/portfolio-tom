@@ -1,0 +1,97 @@
+@use "~/assets/styles/utils" as *;
+
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('/fonts/alteHaasGrotesk/ttf/AlteHaasGrotesk.ttf') format('ttf'),
+    url('/fonts/alteHaasGrotesk/woff/AlteHaasGrotesk.woff') format('woff'),
+    url('/fonts/alteHaasGrotesk/woff2/AlteHaasGrotesk.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('/fonts/alteHaasGrotesk/ttf/AlteHaasGrotesk_Bold.ttf') format('ttf'),
+    url('/fonts/alteHaasGrotesk/woff/AlteHaasGrotesk_Bold.woff') format('woff'),
+    url('/fonts/alteHaasGrotesk/woff2/AlteHaasGrotesk_Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: "Alte Haas Grotesk", serif;
+  font-optical-sizing: auto;
+  font-display: swap;
+}
+
+h1 {
+  font-family: "Alte Haas Grotesk", serif;
+  font-size: toRem(40);
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 1.5px;
+  text-decoration-style: none;
+}
+
+// a,
+// .links-list__mail {
+//   position: relative;
+//   text-decoration: none;
+//   color: inherit;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     bottom: 0.05em;
+//     width: 100%;
+//     height: 0.7px;
+//     background: currentColor;
+//     transform-origin: left;
+//     transform: scaleX(1);
+//     transition: transform 0.3s ease-in-out;
+//   }
+
+//   &:hover::after {
+//     animation: underline-remove 0.2s;
+//     transition: transform 0.15s ease-out;
+//   }
+
+//   &:hover {
+//     &::after {
+//       animation: underline-reveal 0.3s ease-out 0s forwards;
+//     }
+//   }
+// }
+
+// @keyframes underline-reveal {
+//   0% {
+//     transform: scaleX(0);
+//     transform-origin: left;
+//   }
+
+//   100% {
+//     transform: scaleX(1);
+//     transform-origin: left;
+//   }
+// }
+
+// @keyframes underline-remove {
+//   0% {
+//     transform: scaleX(1);
+//     transform-origin: left;
+//   }
+
+//   100% {
+//     transform: scaleX(0);
+//     transform-origin: left;
+//   }
+// }

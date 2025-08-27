@@ -1,0 +1,50 @@
+{
+  "title": "Contact",
+  "items": [
+    {
+      "label": "mon cv",
+      "link": "/cv_tom_wainberg.pdf"
+    },
+    {
+      "label": "mon Linkedin",
+      "link": "https://www.linkedin.com/in/tom-wainberg/"
+    },
+    {
+      "label": "mon behance",
+      "link": "https://www.behance.net/tomwainberg"
+    },
+    {
+      "label": "tom.wainberg@gmail.com",
+      "link": "mailto:tom.wainberg@gmail.com"
+    }
+  ],
+  "footerLinks": {
+    "leftLink": {
+      "label": "retour",
+      "link": "/",
+      "noUnderline": true
+    },
+    "rightLink": {
+      "label": "mentions légales",
+      "link": "/mentions-legales",
+      "noUnderline": true
+    }
+  },
+  "shapes": [
+    {
+      "name": "triangle",
+      "position": "100, 150",
+      "color": "#FF5733"
+    },
+    {
+      "name": "circle",
+      "position": "300, 700",
+      "color": "#33FF57"
+    },
+    {
+      "name": "square",
+      "position": "100, 700",
+      "color": "#FF33FF"
+    }
+  ]
+}
