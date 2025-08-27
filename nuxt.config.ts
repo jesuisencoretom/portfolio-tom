@@ -77,7 +77,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: 'manifest', href: '/manifest.json' },
+        { rel: "manifest", href: "/manifest.json" },
 
         {
           rel: "canonical",
@@ -85,5 +85,6 @@ export default defineNuxtConfig({
         },
       ],
     },
+    pageTransition: { name: "page", mode: "out-in" },
   },
 });

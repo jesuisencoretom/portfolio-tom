@@ -15,11 +15,11 @@ defineProps<{
 
 <template>
   <section class="footer">
-    <NuxtLink v-if="leftLink" :to="leftLink.link" :class="{ 'no-underline': leftLink.noUnderline }" :title="'page' + leftLink.label">{{
+    <NuxtLink v-if="leftLink" :to="leftLink.link" :class="{ 'no-underline': leftLink.noUnderline }" :title="'page ' + leftLink.label">{{
       leftLink.label }}
     </NuxtLink>
     <NuxtLink v-if="rightLink" :to="rightLink.link" :class="{ 'no-underline': rightLink.noUnderline }"
-      :title="'page' + rightLink.label">{{ rightLink.label }}
+      :title="'page ' + rightLink.label">{{ rightLink.label }}
     </NuxtLink>
   </section>
 </template>

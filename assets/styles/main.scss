@@ -20,7 +20,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
 
-  &::selection {  
+  &::selection {
+    background: $black;
+    color: $background-color;
   }
 
   &::-webkit-scrollbar {
@@ -29,4 +31,18 @@ body {
   }
 
   scroll-behavior: smooth;
+}
+
+// Page transitions
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 200ms ease-in-out;
+}
+
+.page-enter-from {
+  opacity: 0;
+}
+
+.page-leave-to {
+  opacity: 0;
 }
