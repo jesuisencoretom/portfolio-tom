@@ -1,3 +1,5 @@
+#version 300 es
+
 in vec2 aPosition;
 out vec2 vTextureCoord;
 

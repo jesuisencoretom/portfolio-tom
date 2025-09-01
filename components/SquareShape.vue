@@ -25,13 +25,20 @@ onMounted(async () => {
   // container.scale.set(0.5)
   app.stage.addChild(container)
 
-  // Chargement et affichage de l'image
-  const texture = await Assets.load('/mock.png')
-  const sprite = new Sprite(texture)
-  sprite.anchor.set(0.5)
-  sprite.position.set(200, 200)
-  sprite.scale.set(0.5)
-  container.addChild(sprite)
+  // // Chargement et affichage de l'image
+  // const texture = await Assets.load('/mock.png')
+  // const sprite = new Sprite(texture)
+  // sprite.anchor.set(0.5)
+  // sprite.position.set(200, 200)
+  // sprite.scale.set(0.5)
+  // container.addChild(sprite)
+
+  // rectangle en fond, couleur du bg
+  const backgroundRectangle = new Graphics().rect(-50, -50, 500, 500).fill(BACKGROUND_COLOR);
+  backgroundRectangle.position.set(100, 100);
+  backgroundRectangle.moveTo(144.849 * 2, 71.9999 * 2);
+  backgroundRectangle.scale.set(0.5);
+  container.addChild(backgroundRectangle);
 
   // Création de la forme équivalente au path SVG (coordonnées * 2) - COMMENTÉE
   const shape = new Graphics()
@@ -51,13 +58,6 @@ onMounted(async () => {
   shape.position.set(100, 100)
   container.addChild(shape)
 
-  const backgroundSquare = new Graphics().rect(0, 0, pixiContainer.value.clientWidth, pixiContainer.value.clientHeight).fill(BACKGROUND_COLOR);
-  backgroundSquare.zIndex = -1;
-  backgroundSquare.pivot.set(pixiContainer.value.clientWidth / 2, pixiContainer.value.clientHeight / 2);
-  backgroundSquare.position.set(pixiContainer.value.clientWidth / 2, pixiContainer.value.clientHeight / 2);
-  backgroundSquare.scale.set(1.3)
-  container.addChild(backgroundSquare);
-
   const customFilter = new Filter({
     glProgram: new GlProgram({
       fragment,
@@ -65,14 +65,17 @@ onMounted(async () => {
     }),
     resources: {
       timeUniforms: {
-        uImageSize: { value: [texture.width, texture.height], type: 'vec2<f32>' },
-        uPlaneSize: { value: [sprite.width, sprite.height], type: 'vec2<f32>' },
-        uBlurStrength: { value: 0.5, type: 'f32' },
-        uBackgroundColor: { value: [BACKGROUND_COLOR >> 16 & 0xFF, BACKGROUND_COLOR >> 8 & 0xFF, BACKGROUND_COLOR & 0xFF], type: 'vec3<f32>' }
+        uResolution: { value: [app.renderer.width, app.renderer.height], type: 'vec2<f32>' },
+        // uBlurStrength: { value: 3.9, type: 'f32' }, // plus utilisé
+        uBackgroundColor: { value: [BACKGROUND_COLOR >> 16 & 0xFF, BACKGROUND_COLOR >> 8 & 0xFF, BACKGROUND_COLOR & 0xFF], type: 'vec3<f32>' },
+        gaussianstrength: { value: 0.5, type: 'f32' }, // force du blur (0.5 par défaut)
+        gaussianlensin: { value: 0.35, type: 'f32' },   // rayon intérieur du blur (en UV, 0.35 ≈ 1/3 de la forme)
+        gaussianlensout: { value: 0.05, type: 'f32' },  // rayon extérieur du blur (en UV, 0.05 ≈ centre)
+        centerX: { value: 0.5, type: 'f32' },           // centre X (0.5 = centre de la forme)
+        centerY: { value: 0.5, type: 'f32' },           // centre Y (0.5 = centre de la forme)
       },
     },
-    padding: 35,
-    
+    // padding: 35,
     antialias: true,
     resolution: window.devicePixelRatio
   });
@@ -122,7 +125,7 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 
   #pixi-container {

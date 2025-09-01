@@ -1,3 +1,4 @@
+#version 300 es
 precision highp float;
 
 in vec2 vTextureCoord;
@@ -19,6 +20,8 @@ uniform float uTime;
 uniform float uBlurStrength;
 // uniform sampler2D tMap;
 
+out vec4 fragColor;
+
 /*
   by @arthurstammet
   https://shadertoy.com/view/tdXXRM
@@ -27,7 +30,7 @@ float tvNoise (vec2 p, float ta, float tb) {
   return fract(sin(p.x * ta + p.y * tb) * 5678.);
 }
 vec4 draw(sampler2D image, vec2 uv) {
-  return texture2D(image,vec2(uv.x, uv.y));   
+  return texture(image,vec2(uv.x, uv.y));   
 }
 float rand(vec2 co){
   return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);
@@ -72,7 +75,7 @@ vec4 blur(vec2 uv, sampler2D image, float blurAmount){
 void main(void)
 {
   vec2 uvs = vTextureCoord.xy;
-  vec4 fg = texture2D(uTexture, vTextureCoord);
+  vec4 fg = texture(uTexture, vTextureCoord);
 
   float t = uTime + 123.0;
   float ta = t * 0.654321;
@@ -85,5 +88,5 @@ void main(void)
   vec4 final = blurred;
   final = final - noise * 0.08;
 
-  gl_FragColor = final;
+  fragColor = final;
 }

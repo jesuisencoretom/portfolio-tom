@@ -48,18 +48,21 @@
   "shapes": [
     {
       "name": "triangle",
-      "position": "100, 150",
-      "color": "#FF5733"
+      "position": "top: 30%, right: -6%, transform: rotate(7.93deg)",
+      "color": "#FF5733",
+      "parallax": "0.3, 0.2"
     },
     {
       "name": "circle",
-      "position": "300, 700",
-      "color": "#33FF57"
+      "position": "top: -17%, left: 40%, transform: rotate(-30deg)",
+      "color": "#33FF57",
+      "parallax": "-0.5, 0.4"
     },
     {
       "name": "square",
-      "position": "100, 700",
-      "color": "#FF33FF"
+      "position": "bottom: -30%, left: 20%, transform: rotate(-15deg)",
+      "color": "#FF33FF",
+      "parallax": "0.2, -0.3"
     }
   ]
 }

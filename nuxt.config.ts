@@ -2,10 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+
   alias: {
     assets: "/<rootDir>/assets",
   },
+
   css: ["~/assets/styles/main.scss"],
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -16,6 +19,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   app: {
     head: {
       title: "Tom Wainberg",
@@ -87,4 +91,6 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "page", mode: "out-in" },
   },
+
+  modules: ["@nuxt/image"],
 });
