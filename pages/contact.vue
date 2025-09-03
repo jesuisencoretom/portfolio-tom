@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import contactContent from '~/content/pages/contact.json';
 import Title from '~/components/Title.vue';
-
+import DefaultPageList from '~/components/DefaultPageList.vue';
 import type { PageData } from '~/@types/pageContent';
 import FooterComponent from '~/components/FooterComponent.vue';
 

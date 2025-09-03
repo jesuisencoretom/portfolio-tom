@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import SquareShape from '@/components/SquareShape.vue';
+import SquareShape from '~/components/SquareShape.vue';
 </script>
 
 <style></style>

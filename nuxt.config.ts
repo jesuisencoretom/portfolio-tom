@@ -82,10 +82,24 @@ export default defineNuxtConfig({
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "manifest", href: "/manifest.json" },
-
         {
           rel: "canonical",
           href: "https://tomwainberg.fr",
+        },
+        {
+          rel: "preload",
+          href: "/fonts/alteHaasGrotesk/woff2/AlteHaasGrotesk_Bold.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "anonymous",
+        },
+        ,
+        {
+          rel: "preload",
+          href: "/fonts/alteHaasGrotesk/woff2/AlteHaasGrotesk.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "anonymous",
         },
       ],
     },
