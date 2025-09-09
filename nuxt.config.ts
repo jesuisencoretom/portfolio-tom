@@ -40,7 +40,7 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Portfolio de Tom Wainberg, je suis un motion designer basé sur Bordeaux et Nantes. Découvrez mon portfolio de motion designer.",
+            "voilà mon porfolio, j'aime la photographie, la vidéo et le motion design.",
         },
         // Open Graph
         {
@@ -51,7 +51,7 @@ export default defineNuxtConfig({
         {
           property: "og:description",
           content:
-            "Portfolio de Tom Wainberg, je suis un motion designer basé sur Bordeaux et Nantes. Découvrez mon portfolio de motion designer.",
+            "voilà mon porfolio, j'aime la photographie, la vidéo et le motion design.",
         },
         { property: "og:site_name", content: "Accueil" },
         { property: "og:url", content: "https://tomwainberg.fr" },

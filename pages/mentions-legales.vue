@@ -24,19 +24,19 @@ useHead({
 
     <div class="content-container">
       <section class="legal-section">
-        <h2>Éditeur</h2>
-        <p>Tom Wainberg</p>
-        <p>Email : <a href="mailto:tom.wainberg@gmail.com">tom.wainberg@gmail.com</a></p>
+        <h2>éditeur</h2>
+        <p>tom wainberg</p>
+        <p>mail : <a href="mailto:tom.wainberg@gmail.com">tom.wainberg@gmail.com</a></p>
       </section>
 
       <section class="legal-section">
-        <h2>Hébergeur</h2>
+        <h2>hébergeur</h2>
         <p>Netlify, Inc.</p>
         <p>44 Montgomery Street, Suite 300, San Francisco, CA 94104</p>
       </section>
 
       <section class="legal-section">
-        <p class="last-updated">Dernière mise à jour : août 2025</p>
+        <p class="last-updated">dernière mise à jour : août 2025</p>
       </section>
     </div>
 
